@@ -1,0 +1,158 @@
+/* styles.css */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #000000, #FF0000);
+    background-size: cover;
+    margin: 0;
+    color: #FFFFFF;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #000000;
+}
+
+h1 {
+    display: inline-block;
+    margin: 0;
+    font-size: 2em;
+    color: #FF0000;
+}
+
+.navbar {
+    overflow: hidden;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+}
+
+.navbar li {
+    padding: 10px 16px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.navbar .home {
+    margin-left: auto;
+}
+
+.navbar .login-btn {
+    background-color: #FF0000;
+    color: #FFFFFF;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.navbar .login-btn:hover {
+    background: #8B0000;
+}
+
+@media screen and (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .navbar,
+    .navbar ul {
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar li {
+        width: 100%;
+        margin: 2px 0;
+    }
+}
+
+.login-container,
+.output-container,
+.mileage-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.login-box,
+.output-box,
+.mileage-content {
+    max-width: 400px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    width: 80%;
+    margin: 20px;
+}
+
+.login-box h2,
+.output-box h2,
+.mileage-content h2,
+.login-box label,
+.login-box p {
+    text-align: center;
+    color: #FF0000;
+}
+
+.login-box label,
+.output-box p,
+.mileage-content p {
+    color: #FFFFFF;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5px;
+}
+
+.login-box button,
+.output-box button {
+    background-color: #FF0000;
+    color: #FFFFFF;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.login-box button:hover,
+.output-box button:hover {
+    background: #8B0000;
+}
+
+#loginResult {
+    text-align: center;
+    margin-top: 10px;
+    color: #FFFFFF;
+    background: #8B0000;
+    padding: 10px;
+    border-radius: 10px;
+}
