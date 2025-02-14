@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - MileageMaster</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="header-container">
+        <h1>MileageMaster</h1>
+        <nav class="navbar">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="logout" class="login-btn">Logout</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="dashboard-container">
+        <div class="dashboard-box">
+            <h2>Dashboard</h2>
+            <div id="mileageEntries"></div>
+            <form id="addMileageForm">
+                <input type="date" id="date" required>
+                <input type="number" id="miles" placeholder="Miles" required>
+                <textarea id="description" placeholder="Description"></textarea>
+                <button type="submit">Add Entry</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/dashboard.js" defer></script>
+</body>
+</html>

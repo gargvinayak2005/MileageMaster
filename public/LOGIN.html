@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - MileageMaster</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box" id="loginForm">
+            <h2>Login</h2>
+            <div id="errorMessage" class="error-message"></div>
+            <form id="loginFormForm">
+                <input type="text" id="username" placeholder="Username" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+            <div class="toggle-forms">
+                Don't have an account? <a onclick="showRegister()">Register here</a>
+            </div>
+        </div>
+
+        <div class="login-box" id="registerForm" style="display: none;">
+            <h2>Register</h2>
+            <div id="registerMessage" class="error-message"></div>
+            <form id="registerFormForm">
+                <input type="text" id="regUsername" placeholder="Username" required>
+                <input type="password" id="regPassword" placeholder="Password" required>
+                <button type="submit">Register</button>
+            </form>
+            <div class="toggle-forms">
+                Already have an account? <a onclick="showLogin()">Login here</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js" defer></script>
+</body>
+</html>

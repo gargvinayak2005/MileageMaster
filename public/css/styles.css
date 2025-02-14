@@ -1,0 +1,503 @@
+/* General resets */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  color: #333;
+}
+
+/* Header */
+.header-container {
+  background: #333;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Layout containers */
+.mileage-container,
+.about-container,
+.contact-container,
+.dashboard-container,
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  flex-direction: column;
+}
+
+/* MileageMaster specific containers */
+.mileage-container,
+.about-container,
+.dashboard-container {
+  padding: 2rem;
+  width: 100%;
+  max-width: 800px;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.mileage-content,
+.dashboard-box,
+.about-container h2,
+.contact-container h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.mileage-container .mileage-content h2,
+.dashboard-container .dashboard-box h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Contact form */
+.contact-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+button {
+  background: #FF0000;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 1rem;
+  width: 100%;
+  border-radius: 5px;
+  transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+  background: #8B0000;
+}
+
+/* Login/Register form */
+.login-container {
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+.login-box {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-box h2 {
+  margin-bottom: 1rem;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.login-box .toggle-forms {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.login-box .toggle-forms a {
+  color: #FF0000;
+  cursor: pointer;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+/* Dashboard styles */
+.dashboard-box {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+}
+
+.dashboard-box h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+#addMileageForm input,
+#addMileageForm textarea {
+  margin: 0.5rem 0;
+}
+
+#addMileageForm button {
+  width: 100%;
+  padding: 10px;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .navbar ul {
+      flex-direction: column;
+      gap: 0.5rem;
+  }
+
+  .mileage-container,
+  .about-container,
+  .contact-container,
+  .dashboard-container {
+      padding: 1rem;
+      max-width: 100%;
+  }
+
+  .login-box,
+  .dashboard-box {
+      max-width: 100%;
+  }
+
+  .form-group label,
+  .form-group input,
+  .form-group textarea {
+      font-size: 0.875rem;
+  }
+
+  button {
+      font-size: 1rem;
+      padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-container h1 {
+      font-size: 1.5rem;
+  }
+
+  .navbar ul {
+      font-size: 0.875rem;
+  }
+
+  .mileage-content h2 {
+      font-size: 1.25rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+      font-size: 1rem;
+  }
+
+  button {
+      font-size: 1rem;
+      padding: 10px;
+  }
+}
+/* styles.css */
+/* Mobile-First Approach */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background: #f0f0f0;
+  color: #333;
+}
+
+/* Header Styles */
+.header-container {
+  background: #333;
+  color: white;
+  padding: 1rem;
+  position: relative;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  padding: 0.5rem 0;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #ff4444;
+}
+
+/* Main Content Containers */
+.mileage-container,
+.about-container,
+.contact-container,
+.dashboard-container,
+.login-container {
+  padding: 2rem 1rem;
+  margin: 1rem auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Cards and Boxes */
+.mileage-content,
+.login-box,
+.dashboard-box,
+.contact-container {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin: 1rem 0;
+}
+
+/* Forms */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Buttons */
+button {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
+  width: 100%;
+}
+
+button:hover {
+  background: #c0392b;
+}
+
+/* Login/Register Specific */
+.login-container {
+  display: flex;
+  justify-content: center;
+  min-height: 80vh;
+  align-items: center;
+}
+
+.login-box {
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.toggle-forms {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.toggle-forms a {
+  color: #e74c3c;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* Dashboard Specific */
+#mileageEntries {
+  width: 100%;
+  margin: 1rem 0;
+}
+
+#addMileageForm input,
+#addMileageForm textarea {
+  margin: 0.5rem 0;
+}
+
+/* Responsive Media Queries */
+@media (min-width: 768px) {
+  .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+
+  .navbar ul {
+      flex-wrap: nowrap;
+      gap: 2rem;
+  }
+
+  .mileage-content,
+  .dashboard-box,
+  .contact-container {
+      padding: 2.5rem;
+  }
+
+  button {
+      width: auto;
+      padding: 0.8rem 2rem;
+  }
+
+  #addMileageForm {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+  }
+  
+  #addMileageForm textarea {
+      grid-column: 1 / -1;
+  }
+}
+
+@media (min-width: 1024px) {
+  .mileage-container,
+  .dashboard-container {
+      padding: 3rem 2rem;
+  }
+}
+
+/* Mobile-Specific Adjustments */
+@media (max-width: 480px) {
+  .header-container h1 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+  }
+
+  .navbar ul {
+      gap: 0.75rem;
+  }
+
+  .mileage-content,
+  .login-box,
+  .dashboard-box {
+      padding: 1.5rem;
+  }
+
+  .form-group label {
+      font-size: 0.9rem;
+  }
+
+  input, textarea {
+      padding: 0.7rem;
+  }
+}
+
+/* Error Messages */
+.error-message {
+  color: #e74c3c;
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+  display: block;
+}
+
+/* Utility Classes */
+.hidden {
+  display: none !important;
+}
+/* Mobile Menu */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+}
+
+@media (max-width: 767px) {
+  .hamburger {
+      display: block;
+  }
+  
+  .navbar ul {
+      display: none;
+      width: 100%;
+      text-align: center;
+  }
+  
+  .navbar ul.mobile-visible {
+      display: flex;
+      flex-direction: column;
+      margin-top: 1rem;
+  }
+  
+  .navbar li {
+      margin: 0.5rem 0;
+  }
+}
